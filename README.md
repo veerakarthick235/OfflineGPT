@@ -1,4 +1,4 @@
-# OfflineGPT v2
+# OfflineGPT
 
 > A fully offline, private ChatGPT — runs entirely on your machine. No internet required. No data ever leaves your device.
 
