@@ -1,0 +1,12 @@
+.attachment-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 14px 4px;
+  animation: previewIn 0.2s ease;
+}
+
+@keyframes previewIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}

@@ -1,0 +1,62 @@
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environment
+backend/venv/
+venv/
+.venv/
+env/
+
+# ── Node / Frontend ────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+.npm/
+
+# ── Data / Generated files ─────────────────────────────────
+backend/data/
+# Keep the data folder itself but ignore contents
+!backend/data/.gitkeep
+
+# ── Models ────────────────────────────────────────────────
+backend/models/
+*.bin
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# ── Environment / Secrets ──────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ── OS ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+logs/

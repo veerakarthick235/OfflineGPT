@@ -1,0 +1,70 @@
+.tool-activity-wrap {
+  display: flex;
+  justify-content: flex-start;
+  padding: 4px 0 8px 0;
+  animation: fadeInUp 0.25s ease;
+}
+
+.tool-activity-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--tool-color, var(--accent)) 12%, var(--bg-secondary));
+  border: 1px solid color-mix(in srgb, var(--tool-color, var(--accent)) 35%, transparent);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--tool-color, var(--accent)) 15%, transparent);
+  max-width: 420px;
+  transition: all 0.3s ease;
+}
+
+.tool-activity-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.tool-activity-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: color-mix(in srgb, var(--tool-color, var(--accent)) 80%, var(--text-primary));
+}
+
+/* Spinning ring */
+.tool-activity-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid color-mix(in srgb, var(--tool-color, var(--accent)) 25%, transparent);
+  border-top-color: var(--tool-color, var(--accent));
+  border-radius: 50%;
+  animation: toolSpin 0.75s linear infinite;
+  flex-shrink: 0;
+}
+
+/* Pulsing dot for 'running' status label */
+.tool-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tool-color, var(--accent));
+  animation: toolPulse 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes toolSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes toolPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,66 @@
+.attach-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 8px 6px 10px;
+  border-radius: 10px;
+  background: var(--surface, rgba(255,255,255,.06));
+  border: 1px solid var(--border, rgba(255,255,255,.1));
+  cursor: default;
+  max-width: 220px;
+  transition: border-color 0.2s;
+  position: relative;
+  animation: chipIn 0.18s ease;
+}
+.attach-chip.processing {
+  border-color: rgba(251,191,36,.3);
+  background: rgba(251,191,36,.06);
+}
+.attach-chip.error {
+  border-color: rgba(239,68,68,.3);
+  background: rgba(239,68,68,.06);
+}
+.attach-chip:hover { border-color: rgba(255,255,255,.2); }
+
+.attach-chip-icon { font-size: 1.05rem; flex-shrink: 0; }
+
+.attach-chip-info {
+  display: flex; flex-direction: column; gap: 1px;
+  overflow: hidden;
+}
+.attach-chip-name {
+  font-size: 0.78rem; font-weight: 500;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.attach-chip-status {
+  font-size: 0.68rem; color: #f59e0b;
+  display: flex; align-items: center; gap: 3px;
+}
+.attach-chip.error .attach-chip-status { color: #ef4444; }
+
+.attach-chip-remove {
+  margin-left: 2px; flex-shrink: 0;
+  width: 18px; height: 18px;
+  border: none; border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  color: var(--text-dim, #888);
+  cursor: pointer; font-size: 14px; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  padding: 0;
+}
+.attach-chip-remove:hover {
+  background: rgba(239,68,68,.25);
+  color: #ef4444;
+}
+
+.attach-spin {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes chipIn {
+  from { opacity: 0; transform: scale(0.85) translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes spin { to { transform: rotate(360deg); } }

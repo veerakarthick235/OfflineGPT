@@ -1,0 +1,29 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+httpx==0.27.0
+aiosqlite==0.20.0
+chromadb==0.5.3
+python-multipart==0.0.9
+pydantic==2.7.1
+
+# ── Image generation (HuggingFace Diffusers) ─────────────────────────
+diffusers>=0.30.0
+transformers>=4.44.0
+accelerate>=0.33.0
+safetensors>=0.4.3
+Pillow>=10.0.0
+huggingface_hub>=0.24.0
+
+# ── PyTorch ──────────────────────────────────────────────────────────
+# CPU version installed automatically below.
+# For GPU (CUDA 12.x):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+
+# ── Offline Speech-to-Text (faster-whisper) ──────────────────────────
+faster-whisper>=1.0.0
+
+# ── Phase 1: Hybrid RAG ───────────────────────────────────────────────
+rank-bm25>=0.2.2
+sentence-transformers>=3.0.0
